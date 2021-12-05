@@ -4,10 +4,6 @@ import { Page404Component } from './page-404.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes:Routes = [
-  // {
-  //   path:'**',
-  //   redirectTo:''
-  // },
   {
     path:'',
     component: Page404Component

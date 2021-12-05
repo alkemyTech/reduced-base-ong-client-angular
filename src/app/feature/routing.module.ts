@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-
 const routes:Routes = [
   {
     path:'',
@@ -13,7 +12,7 @@ const routes:Routes = [
   },
   {
     path:'error',
-    loadChildren: ()=> import("./public/page-404/page-404.module").then( m => m.Page404Module )
+    loadChildren: ()=> import("./page-404/page-404.module").then( m => m.Page404Module )
   },
   {
     path:'home',
