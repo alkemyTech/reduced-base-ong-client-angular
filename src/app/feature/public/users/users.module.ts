@@ -7,16 +7,16 @@ const routes:Routes = [
     path:'',
     children:[
       {
-        path:'login',
+        path:'ingresar',
         loadChildren: ()=> import("./login/login.module").then( m => m.LoginModule )
       },
       {
-        path:'register',
+        path:'registrarse',
         loadChildren: ()=> import("./register/register.module").then( m => m.RegisterModule )
       },
       {
         path:'**',
-        redirectTo:'login'
+        redirectTo:'ingresar'
       },
     ]
   },

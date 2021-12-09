@@ -12,11 +12,11 @@ const route:Routes = [
         component:NewsComponent
       },
       {
-        path: 'edit/:id',
+        path: 'editar/:id',
         loadChildren: ()=> import("./edit/edit.module").then( m => m.EditModule )
       },
       {
-        path: 'create',
+        path: 'crear',
         loadChildren: ()=> import("./create/create.module").then( m => m.CreateModule )
       }
     ]

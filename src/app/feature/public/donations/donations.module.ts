@@ -8,7 +8,7 @@ const routes:Routes = [
     loadChildren: ()=> import("./donation/donation.module").then( m => m.DonationModule )
   },
   {
-    path:'thank-you',
+    path:'gracias',
     loadChildren: ()=> import("./thanks/thanks.module").then( m => m.ThanksModule )
   }
 ]

@@ -1,0 +1,46 @@
+
+.container
+    // display: flex
+    // justify-content: center
+    background-color: #fff
+    background-clip: border-box
+
+.carousel
+    width: 1000px
+    height: 500px
+
+.carousel-item
+    display: flex !important
+    align-items: center
+    border-radius: 6px
+    object-fit: none
+    object-position: center
+    overflow: hidden
+    background: #000
+    width: 1000px
+    height: 500px
+    
+    &before
+        content: ""
+        background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3))
+        display: block
+        position: absolute
+        top: 0
+
+h5
+    font-size: 30px
+
+#image-link
+    min-width: 400px
+    min-height: 250px
+    max-width: 1000px
+    max-height: 500px
+    margin: auto
+    background-size: cover
+    background-position: center
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    opacity: 0.5
+    cursor: pointer

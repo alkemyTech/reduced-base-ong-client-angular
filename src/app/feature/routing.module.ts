@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { SharedModule } from '@shared/shared.module';
 const routes:Routes = [
   {
     path:'',
@@ -15,7 +16,7 @@ const routes:Routes = [
     loadChildren: ()=> import("./page-404/page-404.module").then( m => m.Page404Module )
   },
   {
-    path:'home',
+    path:'inicio',
     redirectTo:''
   },
   {
@@ -25,7 +26,7 @@ const routes:Routes = [
 ]
 
 @NgModule({
-  declarations: [],
+  declarations: [ ],
   imports: [
     CommonModule,
     RouterModule.forRoot(routes)

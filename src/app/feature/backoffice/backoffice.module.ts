@@ -12,31 +12,31 @@ const routes:Routes = [
         loadChildren: ()=> import("./home/home.module").then( m => m.HomeModule )
       },
       {
-        path:'activities',
+        path:'actividades',
         loadChildren: ()=> import("./activities/activities.module").then( m => m.ActivitiesModule )
       },
       {
-        path:'categories',
+        path:'categorias',
         loadChildren: ()=> import("./members/members.module").then( m => m.MembersModule )
       },
       {
-        path:'news',
+        path:'noticias',
         loadChildren: ()=> import("./news/news.module").then( m => m.NewsModule )
       },
       {
-        path:'organization',
+        path:'organizacion',
         loadChildren: ()=> import("./organization/organization.module").then( m => m.OrganizationModule )
       },
       {
-        path:'slides',
+        path:'carrousel',
         loadChildren: ()=> import("./slides/slides.module").then( m => m.SlidesModule )
       },
       {
-        path:'testimonials',
+        path:'testimonios',
         loadChildren: ()=> import("./testimonials/testimonials.module").then( m => m.TestimonialsModule )
       },
       {
-        path:'users',
+        path:'usuarios',
         loadChildren: ()=> import("./users/users.module").then( m => m.UsersModule )
       },
     ]

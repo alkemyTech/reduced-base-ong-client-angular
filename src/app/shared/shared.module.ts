@@ -1,15 +1,18 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from './vendors/material.module';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { JumbotronImageComponent } from './components/jumbotron-image/jumbotron-image.component';
+import { SlideComponent } from './components/slide/slide.component';
+import { TitleComponent } from './components/title/title.component';
 
-
-
+export const componentsToExports = [
+  SlideComponent,
+  JumbotronImageComponent,
+  TitleComponent
+];
 @NgModule({
-  declarations: [],
-  exports:[MaterialModule],
-  imports: [
-    CommonModule,
-    MaterialModule
-  ]
+  declarations: [...componentsToExports],
+  exports: [...componentsToExports],
+  imports: [CommonModule, RouterModule],
 })
-export class SharedModule { }
+export class SharedModule {}

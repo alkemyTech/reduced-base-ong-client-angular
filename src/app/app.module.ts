@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CoreModule } from '@core/core.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SharedModule } from '@shared/shared.module';
 import { AppComponent } from './app.component';
 import { FeatureModule } from './feature/feature.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from '@shared/shared.module';
 
 
 @NgModule({
@@ -13,9 +15,11 @@ import { SharedModule } from '@shared/shared.module';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    CoreModule,
     FeatureModule,
-    SharedModule
+    NgbModule,
   ],
+  exports:[ SharedModule ],
   providers: [],
   bootstrap: [AppComponent]
 })

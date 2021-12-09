@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClientService } from '@core/services/http-client.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'alk-home',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  public slides$:BehaviorSubject<[]> = new BehaviorSubject([]);
+  
+  constructor( private http: HttpClientService ) {
+    this.slides$.next([])
+   }
 
   ngOnInit(): void {
   }
