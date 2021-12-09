@@ -9,7 +9,7 @@
         <img
           id="image-link"
           [routerLink]="[routePrefix, items[0]?.id]"
-          [src]="(items[0]?.image)?items[0].image : '../../assets/images/placeholder-image.png' "
+          [src]="(items[0]?.image)?items[0].image : '/assets/images/placeholder-image.png' "
           class="d-block"
         />
         <div class="carousel-caption d-none d-md-block">
@@ -18,7 +18,7 @@
       </div>
       <ng-container *ngFor="let item of items | slice: 1">
         <div class="carousel-item" data-bs-interval="5000">
-            <img id="image-link" [routerLink]="[routePrefix, item?.id]" [src]="(item?.image)?item.image:'../../assets/images/placeholder-image.png' " class="d-block" />
+            <img id="image-link" [routerLink]="[routePrefix, item?.id]" [src]="(item?.image)?item.image:'/assets/images/placeholder-image.png' " class="d-block" />
           <div class="carousel-caption d-none d-md-block">
             <h5>{{ item?.name }}</h5>
           </div>

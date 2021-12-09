@@ -1,0 +1,55 @@
+<!-- Information -->
+<ng-template #info>
+
+  <article class="message bg-info">
+    <div class="message-header">
+      <p class="modal-head text-head">{{dataDialog.title}}</p>
+    </div>
+    <div class="message-body">
+      {{dataDialog.message}}
+    </div>
+    <div class="group-buttons">
+      <button mat-button mat-dialog-close (click)="returnRes($event)" [value]="true"
+        class="button btn btn-secondary">Cerrar</button>
+    </div>
+  </article>
+
+</ng-template>
+
+<!-- Warning -->
+<ng-template #error>
+
+  <article class="message bg-danger">
+    <div class="message-header">
+      <p class="modal-head text-head">{{dataDialog.title}}</p>
+    </div>
+    <div class="message-body">
+      {{dataDialog.message}}
+    </div>
+    <div class="group-buttons">
+      <button mat-button mat-dialog-close (click)="returnRes($event)" [value]="true"
+        class="button btn btn-secondary">Aceptar</button>
+    </div>
+  </article>
+
+</ng-template>
+
+<!-- Confirmation -->
+<ng-template #confirm>
+
+  <article class="message bg-success">
+    <div class="message-header">
+      <p class="modal-head text-head">{{dataDialog.title}}</p>
+    </div>
+    <div class="message-body">
+      {{dataDialog.message}}
+    </div>
+    <div class="group-buttons">
+      <button mat-button mat-dialog-close (click)="returnRes($event)" [value]="true"
+        class="button btn btn-secondary">Aceptar</button>
+      <button mat-button mat-dialog-close (click)="returnRes($event)" [value]="true"
+        class="button btn btn-secondary">Cerrar</button>
+    </div>
+  </article>
+
+</ng-template>

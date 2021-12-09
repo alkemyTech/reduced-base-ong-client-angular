@@ -1,1 +1,21 @@
-<p>contact works!</p>
+<div class="col-12">
+    <div class="row">
+        <div class="mb-5 mt-3 justify-content-center">
+            <alk-title [text]="'Podés encontrarnos en:'" ></alk-title>
+            <img src="https://cualbondi.com.ar/media/poi.webp/poi-la-cava-del-vino.880x300.webp" alt="mapa" width="auto" height="auto" class="mx-auto my-3 d-flex">
+            <alk-form-contact></alk-form-contact>
+        </div>
+        <hr class="m-0">
+        <div *ngIf="organization" class="contact-container">
+            <a><i class="fas fa-phone"></i> Teléfono: {{organization.cellphone | phone}}</a>
+            <a href="http://{{organization.facebook_url}}" target="_blank"><i
+                    class="fab fa-facebook"></i><span>Facebook</span></a>
+            <a href="http://{{organization.linkedin_url}}" target="_blank"><i
+                    class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+            <a href="http://{{organization.instagram_url}}" target="_blank"><i
+                    class="fab fa-instagram"></i><span>Instagram</span></a>
+            <a href="http://{{organization.twitter_url}}" target="_blank"><i
+                    class="fab fa-twitter"></i><span>Twitter</span></a>
+        </div>
+    </div>
+</div>

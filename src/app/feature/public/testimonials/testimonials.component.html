@@ -1,0 +1,9 @@
+<div class="col-12 d-flex flex-column mt-5 h-100">
+    <div class="row justify-content-center">
+        <alk-title [text]="'Testimonios'" [size]="'big'"></alk-title>
+        <ng-container *ngFor="let item of testimonials">
+            <alk-card [img]="item.image" [content]="item.description" [title]="item.name"
+                class="col-auto mt-4"></alk-card>
+        </ng-container>
+    </div>
+</div>

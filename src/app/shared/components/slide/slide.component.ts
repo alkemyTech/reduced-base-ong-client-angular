@@ -8,7 +8,7 @@ import {
 @Component({
   selector: 'alk-slides',
   templateUrl: './slide.component.html',
-  styleUrls: ['./slide.component.sass'],
+  styleUrls: ['./slide.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class SlideComponent implements OnInit {

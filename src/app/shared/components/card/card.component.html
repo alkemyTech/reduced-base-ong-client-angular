@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-image">
+    <figure class="image crop">
+      <img [src]="img ? img : '/assets/images/placeholder-image.png'" alt="card image"/>
+    </figure>
+    <div class="card_title">
+      <p class="title is-4">{{ title }}</p>
+    </div>
+  </div>
+  <div class="card-content">
+    <div class="content p-4" [innerHTML]="content"></div>
+    <section *ngIf="linkedin && facebook">
+      <a href="https://www.{{facebook}}" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+      <a href="https://www.{{linkedin}}" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+    </section>
+  </div>
+</div>

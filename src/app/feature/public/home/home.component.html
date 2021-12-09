@@ -1,18 +1,29 @@
-<div class="container-fluid pt-2">
+<div class="container-fluid">
     <section>
-        <!-- <alk-slides [items]="(slides$ | async)!"></alk-slides>-->
-        <alk-jumbotron-image ></alk-jumbotron-image>
+        <alk-jumbotron-image [image]="'assets/images/background.png'"></alk-jumbotron-image>
     </section>
     <section class="mt-4">
         <alk-title [text]="'Texto de Bienvenida'" [size]="'big'"></alk-title>
     </section>
-    <section class="mt-5">
+    <section class="mt-5 col-12">
         <alk-title [text]="'Ultimas Novedades'"></alk-title>
-        
+        <div class="row justify-content-center">
+            <ng-container *ngFor="let item of news$|async|slice :5">
+                <alk-card [img]='item.image' [content]="item.content" [title]="item.name"
+                    class="col-sm-auto col-md-auto col-lg-3 mt-4"></alk-card>
+            </ng-container>
+        </div>
+
     </section>
 
-    <section class="mt-5">
-        <alk-title [text]="'Testimonios'"></alk-title>
+    <section class="mt-5 col-12">
+        <alk-title [text]="'Testimonios'" ></alk-title>
+        <div class="row justify-content-center">
+            <ng-container *ngFor="let item of testimonials$|async|slice :3">
+                <alk-card [img]='item.image' [content]="item.content" [title]="item.name"
+                    class="col-sm-auto col-md-auto col-lg-3 mt-4"></alk-card>
+            </ng-container>
+        </div>
 
     </section>
 </div>

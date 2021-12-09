@@ -1,13 +1,7 @@
-<div class="row" [ngClass]="((align === 'start') && 'text-start' || (align === 'end') && 'text-end') || 'text-center'">
-    <container [ngSwitch]="size">
-        <h4 *ngSwitchCase="'medium'"> 
-            {{text}}
-        </h4>
-        <h1 *ngSwitchCase="'big'">
-            {{text}}
-        </h1>
-        <h6 *ngSwitchDefault>
-            {{text}}
-        </h6>
-    </container>
+<div class="row" [ngClass]="(align === 'start' && 'text-start') || (align === 'end' && 'text-end') || 'text-center'">
+  <container [ngSwitch]="size">
+    <h4 *ngSwitchCase="'medium'" [innerHTML]="text"></h4>
+    <h1 *ngSwitchCase="'big'" [innerHTML]="text"></h1>
+    <h6 *ngSwitchDefault [innerHTML]="text"></h6>
+  </container>
 </div>

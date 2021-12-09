@@ -1,1 +1,13 @@
-<p>about-us works!</p>
+<div class="col-12 d-flex flex-column mt-5 h-100">
+    <div class="row justify-content-center">
+        <alk-title [text]="'¿Quienes somos?'" [size]="'big'"></alk-title>
+        <alk-title [text]="desc" class="col-8"></alk-title>
+    </div>
+    <div class="row mt-5 justify-content-center">
+        <alk-title [text]="'Miembros'" [size]="'big'"></alk-title>
+        <ng-container *ngFor="let item of members">
+            <alk-card [img]="item.image" [content]="item.description" [title]="item.name"
+                class="col-auto mt-4"></alk-card>
+        </ng-container>
+    </div>
+</div>

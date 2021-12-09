@@ -1,0 +1,21 @@
+<div class="col-12 d-flex flex-column h-100">
+  <div class="row justify-content-center">
+    <ng-container *ngFor="let item of newsList | slice: 0:numberNews">
+      <alk-card
+        class="col-auto mt-4"
+        [img]="item.image"
+        [content]="formatContent(item)"
+        >" [title]="item.name"(click)="viewInDetail(inew.id)"></alk-card
+      >
+    </ng-container>
+    <div class="row justify-content-center mt-5">
+      <button
+        *ngIf="newsList.length > numberNews"
+        class="btn btn-primary col-2"
+        (click)="numberNews = numberNews + 6"
+      >
+        Ver mas
+      </button>
+    </div>
+  </div>
+</div>

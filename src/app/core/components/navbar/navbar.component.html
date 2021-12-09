@@ -7,7 +7,7 @@
   </button>
   <div id="my-nav" class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto separate">
-      <ng-container *ngFor="let path of routes;let i as index">
+      <ng-container *ngFor="let path of routes;index as i">
         <li class="nav-item" ngClass="i === 0 && 'active'">
           <a class="nav-link" [routerLink]="[path.route]">{{ path.text }}</a>
         </li>
