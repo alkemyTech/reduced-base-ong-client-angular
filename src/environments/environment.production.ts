@@ -1,7 +1,8 @@
 export const environment = {
-  production: false,
+  production: true,
   BASE_API_URL: '',
   PUBLIC_KEY_MP: '',
+  API_KEY_GOOGLE_MAPS: '',
   ACTIVITIES_URL: '',
   CATEGORIES_URL: '',
   SLIDES_URL: '',
