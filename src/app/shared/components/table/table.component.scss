@@ -1,0 +1,44 @@
+@import "variables";
+
+.table-header {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  & > * {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+.bg-light {
+  background-color: lighten($ong-primary, 39%) !important;
+}
+
+.header {
+  font-family: $ong-font;
+}
+
+::ng-deep {
+  .table-activity,
+  .table-body {
+    * {
+      @media (max-width: 512px) {
+        font-size: 12px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+.table-container {
+  flex: 1;
+  height: 100%;
+}
+
+* {
+  overflow: hidden;
+  white-space: nowrap; /* Don't forget this one */
+  text-overflow: ellipsis;
+}

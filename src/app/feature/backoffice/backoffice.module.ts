@@ -17,10 +17,10 @@ const routes:Routes = [
       },
       {
         path:'categorias',
-        loadChildren: ()=> import("./members/members.module").then( m => m.MembersModule )
+        loadChildren: ()=> import("./categories/categories.module").then( m => m.CategoriesModule )
       },
       {
-        path:'noticias',
+        path:'novedades',
         loadChildren: ()=> import("./news/news.module").then( m => m.NewsModule )
       },
       {
@@ -38,6 +38,14 @@ const routes:Routes = [
       {
         path:'usuarios',
         loadChildren: ()=> import("./users/users.module").then( m => m.UsersModule )
+      },
+      {
+        path:'slides',
+        loadChildren: ()=> import("./slides/slides.module").then( m => m.SlidesModule )
+      },
+      {
+        path:'miembros',
+        loadChildren: ()=> import("./members/members.module").then( m => m.MembersModule )
       },
     ]
   }

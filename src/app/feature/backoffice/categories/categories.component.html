@@ -1,1 +1,17 @@
-<p>categories works!</p>
+<div class="container-fluid pb-4 mt-4">
+  <div class="row mb-4">
+    <alk-title [text]="'Categorias'" [size]="'big'" class=""></alk-title>
+  </div>
+  <alk-table
+    [items]="categories"
+    (deleteEvent)="deleteCategory($event)"
+    (editEvent)="editCategory($event)"
+    *ngIf="!(spinner$.status|async)"
+  ></alk-table>
+</div>
+<alk-sticky-action
+  [text]="'Agregar'"
+  (actionEvent)="createCategory()"
+  [icon]="'fas fa-plus'"
+>
+</alk-sticky-action>

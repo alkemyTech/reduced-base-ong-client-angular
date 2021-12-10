@@ -1,1 +1,17 @@
-<p>news works!</p>
+<div class="container-fluid pb-4 mt-4">
+  <div class="row mb-4">
+    <alk-title [text]="'Novedades'" [size]="'big'" class=""></alk-title>
+  </div>
+  <alk-table
+    [items]="news"
+    (deleteEvent)="deleteNew($event)"
+    (editEvent)="editNew($event)"
+    *ngIf="!(spinner$.status|async)"
+  ></alk-table>
+</div>
+<alk-sticky-action
+  [text]="'Agregar'"
+  (actionEvent)="createNew()"
+  [icon]="'fas fa-plus'"
+>
+</alk-sticky-action>

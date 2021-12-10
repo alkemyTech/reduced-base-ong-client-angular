@@ -6,6 +6,6 @@ export interface IMember {
     facebookUrl?: string,
     linkedinUrl?: string,
     created_at?: string,
-    updated_at?: string,
-    deleted_at?: string,
+    updated_at?: string | null,
+    deleted_at?: string | null,
 }

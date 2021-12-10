@@ -1,0 +1,24 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-dark bg-light sidebar"  *ngIf="(sidebar$.status|async)">
+    <a href="/" class="d-flex justify-content-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none text-center w-100">
+      <span class="fs-4">Sidebar</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <ng-container *ngFor="let item of backoffice">
+        <li class="nav-item">
+          <a href="#" class="nav-link text-dark" [routerLink]="item.path" (click)="sidebar$.toogleDisplay()">
+            <img [src]="item.img" alt="" height="20 " width="20  ">
+            {{ item.title }}
+          </a>
+        </li>
+      </ng-container>
+     
+    </ul>
+    <hr>
+    <div class="">
+      <a class="d-flex align-items-center text-dark text-decoration-none" >
+        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+        <strong>Admin</strong>
+      </a>
+    </div>
+  </div>

@@ -1,1 +1,18 @@
-<p>slides works!</p>
+<div class="container-fluid pb-4 mt-4">
+    <div class="row mb-4">
+      <alk-title [text]="'Slides'" [size]="'big'" class=""></alk-title>
+    </div>
+    <alk-table
+      [items]="slides"
+      (deleteEvent)="deleteSlide($event)"
+      (editEvent)="editSlide($event)"
+      *ngIf="!(spinner$.status|async)"
+    ></alk-table>
+  </div>
+  <alk-sticky-action
+    [text]="'Agregar'"
+    (actionEvent)="createSlide()"
+    [icon]="'fas fa-plus'"
+  >
+  </alk-sticky-action>
+  

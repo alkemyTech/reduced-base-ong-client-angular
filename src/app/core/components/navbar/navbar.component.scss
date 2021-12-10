@@ -1,10 +1,69 @@
-.navbar{
-    height: 60px;
-    gap: 39px;
-    padding: 8px 40px;
+@import "variables";
+
+.navbar {
+  height: 60px;
+  gap: 39px;
+  padding: 8px 40px;
 }
 
-.separate{
-    gap:20px
+.separate {
+  gap: 20px;
 }
 
+.hover:hover {
+  background-color: lighten($ong-secondary, 10%);
+  font-style: italic;
+  opacity: 0.75;
+}
+
+.bg-ong {
+  background: $ong-secondary;
+}
+
+.bg-primary-darken {
+  background-color: darken($ong-secondary, 15%);
+  color: white;
+  &:hover {
+    background-color: darken($ong-secondary, 20%);
+  }
+}
+
+@media (max-width: 996px) {
+  #my-nav {
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background-color: lighten($ong-secondary, 18%);
+    padding: 0 1rem 1.5rem;
+    box-shadow: 1px 10px 21px -10px rgba(0, 0, 0, 0.2);
+    .separate {
+      gap: 0px !important;
+    }
+    .nav-link {
+      padding: 0.25rem 0;
+      border-bottom: 0.25px solid rgb(236, 234, 234);
+    }
+    li:last-child {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.backoffice-title {
+  font-size: 1rem;
+  @media(max-width:512px){
+    display: none;
+  }
+}
+
+i{
+  font-size: 20px;
+}
+
+.btn-backoffice{
+  gap: 8px;
+}
+.btn-home{
+  gap: 8px;
+}

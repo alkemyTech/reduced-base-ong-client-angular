@@ -1,1 +1,18 @@
-<p>activities works!</p>
+<div class="container-fluid pb-4 mt-4">
+    <div class="row mb-4">
+      <alk-title [text]="'Actividades'" [size]="'big'" class=""></alk-title>
+    </div>
+    <alk-table
+      [items]="activities"
+      (deleteEvent)="deleteActivity($event)"
+      (editEvent)="editActivity($event)"
+      *ngIf="!(spinner$.status|async)"
+    ></alk-table>
+  </div>
+  <alk-sticky-action
+    [text]="'Agregar'"
+    (actionEvent)="createActivity()"
+    [icon]="'fas fa-plus'"
+  >
+  </alk-sticky-action>
+  

@@ -11,6 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './vendors/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { TableComponent } from './components/table/table.component';
+import { StickyActionComponent } from './components/sticky-action/sticky-action.component';
 
 export const componentsToExports = [
   SlideComponent,
@@ -20,10 +22,12 @@ export const componentsToExports = [
   DialogComponent,
   PhonePipe,
   PagePipe,
+  TableComponent,
+  StickyActionComponent,
 ];
 @NgModule({
   declarations: [...componentsToExports, PhonePipe, PagePipe],
-  exports: [...componentsToExports, ReactiveFormsModule,],
-  imports: [CommonModule, RouterModule, ReactiveFormsModule,],
+  exports: [...componentsToExports, ReactiveFormsModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule],
 })
 export class SharedModule {}

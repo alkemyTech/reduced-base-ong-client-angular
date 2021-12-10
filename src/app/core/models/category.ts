@@ -1,10 +1,11 @@
-export interface Category {
-    id:                 number;
-    name:               string;
-    description:        string;
-    image:              string;
-    parent_category_id: number;
-    created_at:         Date;
-    updated_at:         Date;
-    deleted_at:         Date;
+export interface ICategory {
+  id                : number;
+  name              : string | null;
+  description       : string | null;
+  image             : string | null;
+  parent_category_id: number | null;
+  created_at        : Date | string | null;
+  updated_at        : Date | string | null;
+  deleted_at        : Date | string | null;
+  group_id          : null;
 }
