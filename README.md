@@ -1,3 +1,5 @@
+# reduced-base-ong-client-angular
+Repositorio base (reducido) para Caso ONG de Angular
 # OngClient
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
