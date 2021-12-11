@@ -1,1 +1,72 @@
-<p>organization works!</p>
+<div class="container pb-5">
+    <div class="row justify-content-center">
+        <div class="col-8 mt-5">
+            <alk-title [text]="'Editar datos de la organización'" [size]="'big'"></alk-title>
+        </div>
+
+        <form class="form form-group" [formGroup]="organizationForm" (ngSubmit)="onSubmit()">
+            <div class="col-12 my-4">
+                <alk-title [text]="'Nombre de la organizacion'" [size]="'small'" [align]="'start'"></alk-title>
+                <input class="form-control" type="text" formControlName="name"
+                    placeholder="Nombre" />
+            </div>
+            <div class="col-12 my-4">
+                <alk-title [text]="'Descripción corta'" [size]="'small'" [align]="'start'"></alk-title>
+                <ckeditor [editor]="ckeditor" class="editor" formControlName="shortDescription">
+                </ckeditor>
+            </div>
+            <div class="col-12 my-4">
+                <alk-title [text]="'Descripción larga'" [size]="'small'" [align]="'start'"></alk-title>
+                <ckeditor [editor]="ckeditor" class="editor" formControlName="longDescription">
+                </ckeditor>
+            </div>
+            <div class="col-12 text-center my-4">
+                <img *ngIf="!photo" src="assets/images/placeholder-image.png"
+                    class="img-rounded-circle" alt="place holder" width="300" height="200" />
+                <div *ngIf="photo" class="col-12 mt-2">
+                    <img [src]="photo" class="img-rounded-circle" width="300" height="200" alt="User's profile image" />
+                </div>
+                <div class="col-12 mt-2">
+                    <label class="btn btn-outline-primary">
+                        <i class="fas fa-upload"></i>
+                        Seleccionar foto de perfil
+                        <input type="file" class="d-none" accept=".jpg, .png"
+                            (change)="onPhotoSelected($event)" />
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-12 my-4">
+                <alk-title [text]="'Facebook'" [size]="'small'" [align]="'start'"></alk-title>
+
+                <input class="input form-control" type="text" placeholder="Enlace a Facebook"
+                    formControlName="facebookUrl" />
+            </div>
+
+            <div class="col-12 my-4">
+                <alk-title [text]="'Linkedin'" [size]="'small'" [align]="'start'"></alk-title>
+
+                <input class="input form-control" type="text" placeholder="Enlace a linkedin"
+                    formControlName="linkedinUrl" />
+            </div>
+            <div class="col-12 my-4">
+                <alk-title [text]="'Instagram'" [size]="'small'" [align]="'start'"></alk-title>
+
+                <input class="input form-control" type="text" placeholder="Enlace a instagram"
+                    formControlName="instagramUrl" />
+            </div>
+            <div class="col-12 my-4">
+                <alk-title [text]="'Twitter'" [size]="'small'" [align]="'start'"></alk-title>
+
+                <input class="input form-control" type="text" placeholder="Enlace a twitter"
+                    formControlName="twitterUrl" />
+            </div>
+
+            
+            <button class="btn btn-lg btn-block btn-success col-12" type="submit" [disabled]="organizationForm.invalid">
+                Editar
+            </button>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8 mt-5">
+            <alk-title [text]="title" [size]="'big'"></alk-title>
+        </div>
+        <div class="col-8">
+            <form class="form-group row" [formGroup]="activityForm" (ngSubmit)="onSubmit()">
+
+                <div class="col-12 my-4">
+                    <alk-title [text]="'Titulo'" [size]="'small'" [align]="'start'"></alk-title>
+
+                    <input class="form-control" type="text" formControlName="name"
+                        placeholder="Título de la Actividad" />
+                </div>
+
+                <div class="col-12 ">
+                    <alk-title [text]="'Descripción'" [size]="'small'" [align]="'start'"></alk-title>
+                    <ckeditor [editor]="ckeditor" class="editor" formControlName="description">
+                    </ckeditor>
+                </div>
+
+                <div class="col-12 text-center my-4">
+                    <img *ngIf="!photo && !activity?.name" src="assets/images/placeholder-image.png"
+                        class="img-rounded-circle" alt="place holder" width="300" height="200" />
+                    <div *ngIf="photo || activity?.image " class="col-12 mt-2">
+                        <img [src]="photo || activity?.image " class="img-rounded-circle" width="300" height="200" alt="User's profile image" />
+                    </div>
+                    <div class="col-12 mt-2">
+                        <label class="btn btn-outline-primary">
+                            <i class="fas fa-upload"></i>
+                            Seleccionar foto de perfil
+                            <input type="file" class="d-none" accept=".jpg, .png"
+                                (change)="onPhotoSelected($event)" />
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn btn-lg btn-block btn-success" type="submit" [disabled]="activityForm.invalid">
+                    {{ isEditing ? "Editar" : "Crear" }}
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>

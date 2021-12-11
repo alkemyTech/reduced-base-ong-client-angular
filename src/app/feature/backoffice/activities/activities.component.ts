@@ -15,11 +15,7 @@ export class ActivitiesComponent implements OnInit {
   constructor(public spinner$: SpinnerService, private route: Router) {}
 
   ngOnInit(): void {
-    this.spinner$.toogleDisplay();
-    setTimeout(() => {
-      this.activities = mockActivities;
-      this.spinner$.toogleDisplay();
-    }, 1500);
+    this.activities = mockActivities;
   }
 
   deleteActivity(id: number) {
@@ -33,7 +29,7 @@ export class ActivitiesComponent implements OnInit {
   createActivity() {
     this.route.navigate(['backoffice/actividades/crear']);
   }
-  
+
   editActivity(id: number) {
     this.route.navigate(['backoffice/actividades/editar', id]);
   }

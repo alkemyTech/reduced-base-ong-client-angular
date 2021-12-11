@@ -14,11 +14,7 @@ export class UsersComponent implements OnInit {
   constructor(public spinner$: SpinnerService, private route: Router) {}
 
   ngOnInit(): void {
-    this.spinner$.toogleDisplay();
-    setTimeout(() => {
-      this.users = mockUsers;
-      this.spinner$.toogleDisplay();
-    }, 1500);
+    this.users = mockUsers;
   }
 
   deleteUser(id: number) {

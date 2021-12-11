@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Page404Component } from './page-404.component';
 import { RouterModule, Routes } from '@angular/router';
+import { SharedModule } from '@shared/shared.module';
 
 const routes:Routes = [
   {
@@ -17,7 +18,8 @@ const routes:Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    SharedModule
   ]
 })
 export class Page404Module { }

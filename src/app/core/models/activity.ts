@@ -1,5 +1,5 @@
 export interface IActivity {
-    id: number;
+    id: number|null;
     name: string;
     slug?: string;
     description: string;

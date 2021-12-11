@@ -14,11 +14,11 @@ const route:Routes = [
       },
       {
         path:'editar/:id',
-        loadChildren: ()=> import("./edit/edit.module").then(m => m.EditModule)
+        loadChildren: ()=> import("./form/form.module").then(m => m.FormModule)
       },
       {
         path:'crear',
-        loadChildren: ()=> import("./create/create.module").then( m => m.CreateModule )
+        loadChildren: ()=> import("./form/form.module").then( m => m.FormModule )
       }
     ]
   }

@@ -6,7 +6,7 @@
     [items]="news"
     (deleteEvent)="deleteNew($event)"
     (editEvent)="editNew($event)"
-    *ngIf="!(spinner$.status|async)"
+    
   ></alk-table>
 </div>
 <alk-sticky-action

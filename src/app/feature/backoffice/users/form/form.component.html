@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8 mt-5">
+            <alk-title [text]="title" [size]="'big'"></alk-title>
+        </div>
+        <div class="col-8">
+            <form class="form-group row" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+                <div class="col-12 my-4">
+                    <alk-title [text]="'Nombre'" [size]="'small'" [align]="'start'"></alk-title>
+
+                    <input class="form-control" type="text" formControlName="name"
+                        placeholder="Nombre" />
+                </div>
+
+                <div class="col-12 my-4">
+                    <alk-title [text]="'Email'" [size]="'small'" [align]="'start'"></alk-title>
+
+                    <input class="form-control" type="email" formControlName="email"
+                        placeholder="usuario@dominio.com" />
+                </div>
+                <div class="col-12 my-4">
+                    <alk-title [text]="'Rol'" [size]="'small'" [align]="'start'"></alk-title>
+
+                    <select formControlName="role_id" class="form-control">
+                        <option value="">Seleccione un rol</option>
+                        <option value="1">Admin</option>
+                        <option value="2">Usuario</option>
+                    </select>
+                </div>
+
+                <div class="col-12 text-center my-4">
+                    <img *ngIf="!photo" src="assets/images/placeholder-image.png"
+                        class="img-rounded-circle" alt="place holder" width="300" height="200" />
+                    <div *ngIf="photo  " class="col-12 mt-2">
+                        <img [src]="photo " class="img-rounded-circle" width="300"
+                            height="200" alt="User's profile image" />
+                    </div>
+                    <div class="col-12 mt-2">
+                        <label class="btn btn-outline-primary">
+                            <i class="fas fa-upload"></i>
+                            Seleccionar foto de perfil
+                            <input type="file" class="d-none" accept=".jpg, .png"
+                                (change)="onPhotoSelected($event)" />
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn btn-lg btn-block btn-success" type="submit"
+                    [disabled]="userForm.invalid">
+                    {{ isEditing ? "Editar" : "Crear" }}
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>

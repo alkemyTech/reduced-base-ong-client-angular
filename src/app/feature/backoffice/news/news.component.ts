@@ -14,11 +14,7 @@ export class NewsComponent implements OnInit {
   constructor(public spinner$: SpinnerService, private route: Router) {}
 
   ngOnInit(): void {
-    this.spinner$.toogleDisplay();
-    setTimeout(() => {
-      this.news = mockNews;
-      this.spinner$.toogleDisplay();
-    }, 1500);
+    this.news = mockNews;
   }
 
   deleteNew(id: number) {

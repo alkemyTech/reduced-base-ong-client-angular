@@ -13,13 +13,8 @@ export class MembersComponent implements OnInit {
 
   constructor(public spinner$: SpinnerService, private route: Router) {}
 
-  
   ngOnInit(): void {
-    this.spinner$.toogleDisplay();
-    setTimeout(() => {
-      this.members = mockMembers;
-      this.spinner$.toogleDisplay();
-    }, 1500);
+    this.members = mockMembers;
   }
 
   deleteMember(id: number) {
@@ -34,8 +29,8 @@ export class MembersComponent implements OnInit {
     this.route.navigate(['backoffice/miembros/crear']);
   }
 
-  editMember(id:number) {
-    this.route.navigate(['backoffice/miembros/editar',id]);
+  editMember(id: number) {
+    this.route.navigate(['backoffice/miembros/editar', id]);
   }
 }
 

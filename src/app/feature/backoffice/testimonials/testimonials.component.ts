@@ -14,11 +14,7 @@ export class TestimonialsComponent implements OnInit {
   constructor(public spinner$: SpinnerService, private route: Router) {}
 
   ngOnInit(): void {
-    this.spinner$.toogleDisplay();
-    setTimeout(() => {
-      this.testimonials = mockTestimonials;
-      this.spinner$.toogleDisplay();
-    }, 1500);
+    this.testimonials = mockTestimonials;
   }
 
   deleteTestimonial(id: number) {

@@ -14,11 +14,7 @@ export class SlidesComponent implements OnInit {
   constructor(public spinner$: SpinnerService, private route: Router) {}
 
   ngOnInit(): void {
-    this.spinner$.toogleDisplay();
-    setTimeout(() => {
-      this.slides = mockSlides;
-      this.spinner$.toogleDisplay();
-    }, 1500);
+    this.slides = mockSlides;
   }
 
   deleteSlide(id: number) {
@@ -38,7 +34,7 @@ export class SlidesComponent implements OnInit {
   }
 }
 
-const mockSlides:ISlide[] = [
+const mockSlides: ISlide[] = [
   {
     id: 653,
     name: 'Primer Slide',

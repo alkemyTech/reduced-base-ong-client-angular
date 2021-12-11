@@ -15,11 +15,7 @@ export class CategoriesComponent implements OnInit {
   constructor(public spinner$: SpinnerService, private route: Router) {}
 
   ngOnInit(): void {
-    this.spinner$.toogleDisplay();
-    setTimeout(() => {
-      this.categories = mockCategories;
-      this.spinner$.toogleDisplay();
-    }, 1500);
+    this.categories = mockCategories;
   }
 
   deleteCategory(id: number) {
@@ -34,12 +30,12 @@ export class CategoriesComponent implements OnInit {
     this.route.navigate(['backoffice/categorias/crear']);
   }
 
-  editCategory(id:number) {
-    this.route.navigate(['backoffice/categorias/editar',id]);
+  editCategory(id: number) {
+    this.route.navigate(['backoffice/categorias/editar', id]);
   }
 }
 
-const mockCategories:ICategory[] = [
+const mockCategories: ICategory[] = [
   {
     id: 1177,
     name: 'mkpli',
